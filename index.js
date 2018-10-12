@@ -1,10 +1,14 @@
 const express = require('express')
 const app = express();
+const bodyParser = require('body-parser');
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log('Express server listening on port ' + port);
+});
+
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
-
-app.listen(8000, () => {
-  console.log('Example app listening on port 8000!')
-});
+    res.send('Hello World!!');
+  });
